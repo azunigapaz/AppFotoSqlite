@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/imageNameET"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Ingrese el nombre de la imagen aqui"
+        android:maxLength="25"
+        android:textColor="@android:color/holo_green_dark"
+        android:textColorHint="@android:color/holo_orange_dark" />
+
+    <ImageView
+        android:id="@+id/image"
+        android:layout_width="match_parent"
+        android:layout_height="400dp"
+        android:layout_below="@id/imageNameET"
+        android:onClick="chooseImage"
+        android:scaleType="centerCrop"
+        android:src="@drawable/mood" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/image"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="storeImage"
+        android:text="Salvar imagen"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/btnTakePhoto"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/saveBtn"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="permisos"
+        android:text="Tomar foto"
+        android:textColor="@android:color/white" />
+
+    <Button
+        android:id="@+id/moveToShowActivity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/btnTakePhoto"
+        android:layout_marginTop="2dp"
+        android:backgroundTint="@android:color/holo_green_dark"
+        android:onClick="moveToShowActivity"
+        android:text="Lista de imagenes"
+        android:textColor="@android:color/white" />
+
+
+</RelativeLayout>
